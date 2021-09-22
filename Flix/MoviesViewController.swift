@@ -72,6 +72,10 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         cell.posterView.af.setImage(withURL: posterUrl!)
         
+        // Rating
+        let rating = movie["vote_average"] as! Double
+        
+        cell.ratingLabel.text = String(rating)
         
         return cell
     }
